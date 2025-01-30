@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Notepad</title>
+    <link
+      rel="shortcut icon"
+      href="./Images/Notepade.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>My Notepad</h1>
+    </header>
+    <!-- Main -->
+
+    <main id="mianContentWrapper" class="mian-content-wrapper">
+      <div id="addDeleteBtnsWrapper" class="add-delete-btns-wrapper">
+        <button
+          title="Delete All"
+          style="cursor: pointer"
+          class="delete-all-notes-btn"
+          id="deleteAllPadsBtn"
+          onclick="deleteAllPads(this)"
+        >
+          <i id="delIcon" class="fa-solid fa-trash"></i>
+        </button>
+        <button
+          title="Create Note"
+          style="cursor: pointer"
+          class="first-add-note-btn"
+          id="AddNoteBtn"
+        >
+          +
+        </button>
+      </div>
+      <div class="confirmation-wrapper">
+        <h3 id="confirmText">Alert! Are you sure to Delete.</h3>
+        <div class="user-concern-wrapper">
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              name="user-confirmed"
+              id="user-confirmed"
+              value="false"
+              onclick="checkBoxValue(this)"
+            />Don't Show this dialogbox again.
+          </div>
+          <div class="yes-no-btn-wrapper">
+            <button id="YesBtn" onclick="yesButtonClicked()">Yes</button>
+            <button id="NoBtn" onclick="noButtonClicked()">No</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts -->
+    <script src="./app.js"></script>
+  </body>
+</html>
